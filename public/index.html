@@ -14,6 +14,9 @@
 <!-- icons  -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
@@ -40,43 +43,43 @@
 <div class="weather-detailes">
 
     <div class="weather">
-<img src="./Assets/mist.png"  class="weather-images">
+<img id="weather-images" src="./Assets/mist.png" style="display: none;">
 
 
-<h1 class="main-temperature">32°C</h1>
+<h1 class="main-temperature" id="main-temperature"></h1>
 
 <div class="min-max">
-    <p class="max">Max 37°C</p>
-    <p class="min">Min 30°C</p>
+    <p class="max" id="max"><SPan style="display: none;" id="max-label">Max</SPan> </p>
+    <p class="min" id="min" ><span style="display: none;" id="min-label">Min</span> </p>
 </div>
 </div>
 
 
 <div class="location">
-    <h2 class="city">Karachi</h2>
-    <h4 class="country">,PK</h4>
+    <h2 class="city" id="city"></h2>
+    <h4 class="country"  id="country"></h4>
 </div>
 
 <div class="weather-other-details">
 
 <div class="humidity">
 
-<img src="./Assets/1000_F_531389758_c4iezHylMxFGhkMjgIzEhlmvll2W1mcI.webp" height="40px" width="40px">
-<p class="how-many-humdity">30%</p>
-<p class="name">Humidity</p>
+<img id="humidity-image" height="40px" width="40px" src="./Assets/images-weather.png.webp"  style="display: none;">
+<p class="how-many-humdity" id="how-many-humdity"></p>
+<p class="name" id="humidity-label"  ></p>
 </div>
 
 <div class="wind-speed">
-    <img src="./Assets/6044096.webp" height="35px">
-    <p class="how-many-windspeed">7.72 km/hr</p>
-    <p class="name-of-wind">Wind Speed</p> 
+    <img width="35px" id="wind-speed-image" src="./Assets/6044096.webp"  style="display: none;">
+    <p class="how-many-windspeed" id="how-many-windspeed"></p>
+    <p class="name-of-wind" id="wind-label"  ></p> 
 </div>
 
 
 <div class="pressure">
-    <img src="./Assets/download (1).png" height="40px">
-    <p class="how-many-pressure">30%</p>
-    <p class="name-of-pressure">Pressure</p> 
+    <img  height="40px" id="pressure-image" src="./Assets/download (1).png"  style="display: none;">
+    <p class="how-many-pressure" id="how-many-pressure"></p>
+    <p class="name-of-pressure" id="pressure-label"  ></p> 
 </div>
 
 
@@ -93,6 +96,6 @@
 
 
     <script src="https://kit.fontawesome.com/0b23134c0e.js" crossorigin="anonymous"></script>
-   <script src="./script.js"></script> 
+   <script src="./script.js" type="module"></script> 
 </body>
 </html>
