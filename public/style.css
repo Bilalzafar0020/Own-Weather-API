@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lobster&family=Poppins:wght@400;500&family=Tsukimi+Rounded:wght@400;500&display=swap');
 
-
-
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +9,6 @@ body{
     height: 100vh;
     width: 100vw;
     background-color:#05263f ;
-    /* overflow: hidden; */
     font-family:'Poppins', sans-serif;
     letter-spacing: 3px;
 }
@@ -37,6 +34,74 @@ main{
  padding: 10px;
 
 }
+@media all and (max-width:562px) and (min-width:476px) {
+    .container{
+        width:26rem;
+    }
+   .searchContent .userInput{
+        max-width: 19rem ;
+  }  
+.wind-speed #wind-label {
+    margin-left: 18px;
+}
+.weather-other-details{
+    gap: 47px;
+}
+}
+
+@media all and (max-width:477px) and (min-width:354px) {
+    .container{
+        width:20rem;
+    }
+    div.weather-detailes{
+        width: 98%;
+    }   
+   .searchContent .userInput{
+        max-width: 15rem ;
+  }  
+.wind-speed #wind-label {
+    margin-left: 11px;
+}
+div.weather-other-details{
+    gap: 16px;
+    margin-left: 5px;
+}
+button#search{
+    margin-left: auto;
+}
+ .searchContent .userInput::placeholder {
+    font-size: 18px;
+    line-height: 14px;
+}
+}
+
+
+@media all and (max-width:354px) and (min-width:310px) {
+    .container{
+        width:18rem;
+    }
+    div.weather-detailes{
+        width: 98%;
+    }   
+   .searchContent .userInput{
+        max-width: 13rem ;
+  }  
+.wind-speed #wind-label {
+    margin-left: 8px;
+}
+div.weather-other-details{
+    gap: 8px;
+    margin-left: -2px;
+}
+button#search{
+    margin-left: auto;
+}
+ .searchContent .userInput::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+}
+}
+
 .searchContent{
 display: flex;
 width: 100%;
@@ -156,7 +221,7 @@ margin-left: 15px;
 
 .wind-speed .name-of-wind{
     font-size: 15px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 .wind-speed .how-many-windspeed{
 font-size: 10px ;

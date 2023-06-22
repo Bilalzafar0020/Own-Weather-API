@@ -18,7 +18,7 @@ app.get('/weather/:cityName', (req, res) => {
             humidity: '30%',
             windSpeed: '7.72 km/hr',
             pressure: '30%',
-            humditylabel: 'Humdidty',
+            howmanyhumdity : 'Humidity',
             pressurelabel: 'Pressure',
             Windlabel : 'Wind Speed'
         },
@@ -31,7 +31,7 @@ app.get('/weather/:cityName', (req, res) => {
             humidity: '40%',
             windSpeed: '5.5 km/hr',
             pressure: '32%',
-            humditylabel: 'Humdidty',
+            howmanyhumdity : 'Humidity',
             pressurelabel: 'Pressure',
             Windlabel : 'Wind Speed'
         },
@@ -44,7 +44,7 @@ app.get('/weather/:cityName', (req, res) => {
             humidity: '35%',
             windSpeed: '6.8 km/hr',
             pressure: '29%',
-            humditylabel: 'Humdidty',
+            howmanyhumdity : 'Humidity',
             pressurelabel: 'Pressure',
             Windlabel : 'Wind Speed'
         },
@@ -57,7 +57,7 @@ app.get('/weather/:cityName', (req, res) => {
             humidity: '45%',
             windSpeed: '4.2 km/hr',
             pressure: '31%',
-            humditylabel: 'Humdidty',
+            howmanyhumdity : 'Humidity',
             pressurelabel: 'Pressure',
             Windlabel : 'Wind Speed'
         },
@@ -70,7 +70,7 @@ app.get('/weather/:cityName', (req, res) => {
             humidity: '50%',
             windSpeed: '3.5 km/hr',
             pressure: '28%',
-            humditylabel: 'Humdidty',
+            howmanyhumdity : 'Humidity',
             pressurelabel: 'Pressure',
             Windlabel : 'Wind Speed'
         },
@@ -83,7 +83,7 @@ app.get('/weather/:cityName', (req, res) => {
             humidity: '38%',
             windSpeed: '5.1 km/hr',
             pressure: '33%',
-            humiditylabel: 'Humdidty',
+            howmanyhumdity : 'Humidity',
             pressurelabel: 'Pressure',
             Windlabel : 'Wind Speed'
         }
@@ -101,7 +101,7 @@ app.get('/weather/:cityName', (req, res) => {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
     console.log(`Example server listening on port ${PORT}`);
 });

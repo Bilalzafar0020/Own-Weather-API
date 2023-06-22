@@ -1,17 +1,35 @@
 // curl ascii.live/forrest 
 
 //  for the size of search bar 
-let allContent = document.getElementById('search').addEventListener('click',()=>{
-    let size = document.getElementById('container');
-size.style.height = '37rem'
+let size = document.getElementById('container');
+let input = document.getElementById('userInput');
 
-})
+
+let allContent = document.getElementById('search').addEventListener('click',()=>{
+
+    let inputValue = input.value;  // so that we get the up to date value when the button is clicked not when the page is loaded
+
+if(inputValue === ''){
+    size.style.height = '7rem';
+    Swal.fire({
+        title: 'Please Enter City Name!',
+        icon: 'info',
+        confirmButtonText: 'OK'
+    });
+}
+else if(inputValue !== '') {
+size.style.height = '37rem';
+}
+
+});
+
+
 
 
 
 document.getElementById('search').addEventListener('click', () => {
-    const userInput = document.getElementById('userInput').value.toLowerCase();
-    axios.get(`/weather/${userInput}`)
+    const cityName = document.getElementById('userInput').value.toLowerCase();
+    axios.get(`/weather/${cityName}`)
         .then(response => {
             const data = response.data;
             if (data) {
@@ -23,7 +41,7 @@ document.getElementById('search').addEventListener('click', () => {
                 document.getElementById('how-many-humdity').textContent = data.humidity;
                 document.getElementById('how-many-windspeed').textContent = data.windSpeed;
                 document.getElementById('how-many-pressure').textContent = data.pressure;
-          document.getElementById('humidity-label').innerText = data.humiditylabel;
+          document.getElementById('howmanyhumdity').innerText = data.howmanyhumdity;
 document.getElementById('wind-label').innerText = data.Windlabel;
 document.getElementById('pressure-label').innerText = data.pressurelabel;
                 const weatherImage = document.getElementById('weather-images');
@@ -38,18 +56,13 @@ document.getElementById('pressure-label').innerText = data.pressurelabel;
 
 document.getElementById('max-label').style.display='block'
 document.getElementById('min-label').style.display='block'
-// document.getElementById('humidity-label').style.display = 'block';
-//                 document.getElementById('wind-label').style.display = 'block';
-//                              
-//               pressureLabel.style.display = 'block';
-const pressureLabel = document.getElementById('pressure-label').innerText='pressure' 
 
             } else {
-                Swal.fire('Error', `Weather data is not available for ${userInput}`, 'error');
+                Swal.fire('Error', `Weather data is not available for ${cityName}`, 'error');
             }
         })
         // .catch(error => {
-        //     Swal.fire('Error', 'Failed to fetch weather data', 'error');
+        //     Swal.fire('Error', `This city or place data is not available: ${cityName}`, 'error');
         // });
 });
 
