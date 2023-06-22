@@ -54,8 +54,8 @@ document.getElementById('pressure-label').innerText = data.pressurelabel;
              windSpeedImage.style.display='block';
              pressureImage.style.display='block';
 
-document.getElementById('max-label').style.display='block'
-document.getElementById('min-label').style.display='block'
+document.getElementById('max-label').style.display='block';
+document.getElementById('min-label').style.display='block';
 
             } else {
                 Swal.fire('Error', `Weather data is not available for ${cityName}`, 'error');
@@ -67,35 +67,3 @@ document.getElementById('min-label').style.display='block'
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-// document.getElementById('search').addEventListener('click', () => {
-//     const userInput = document.getElementById('userInput').value.toLowerCase();
-//     fetch(`/weather/${userInput}`)
-//         .then(response => response.json())
-//         .then(data => {
-//             if (data) {
-//                 document.getElementById('temperature').textContent = data.temperature;
-//                 document.getElementById('max').textContent = data.max;
-//                 document.getElementById('min').textContent = data.min;
-//                 document.getElementById('city').textContent = data.city;
-//                 document.getElementById('humidity').textContent = data.humidity;
-//                 document.getElementById('windSpeed').textContent = data.windSpeed;
-//                 document.getElementById('pressure').textContent = data.pressure;
-//             } else {
-//                 Swal.fire('Error', `Weather data is not available for ${userInput}`, 'error');
-//             }
-//         })
-//         .catch(error => {
-//             Swal.fire('Error', 'Failed to fetch weather data', 'error');
-//         });
-// });
